@@ -1,0 +1,13 @@
+
+<h1>Счётчик посещений</h1>
+<p>Сколько раз открывали эту страницу:</p>
+<div id="counter">Загрузка...</div>
+
+<script>
+let count = localStorage.getItem("visitCount") || 0;
+count++;
+localStorage.setItem("visitCount", count);
+document.getElementById("counter").textContent = count + " посещений";
+</script>
+
+<a class="nav-back" href="../index.html">Назад</a>
